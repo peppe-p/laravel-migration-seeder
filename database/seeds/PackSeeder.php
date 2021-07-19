@@ -15,10 +15,10 @@ class PackSeeder extends Seeder
     {
         for ($i = 0; $i < 12; $i++) {
             $new = new Pack();
-            $new->pack_name = $faker->company;
+            $new->pack_name = $faker->company();
             $new->img = 'https://picsum.photos/400/200';
-            $new->description = $faker->paragraphs();
-            $new->price = $faker->randomFloat(2);
+            $new->description = $faker->paragraph(5, false);
+            $new->price = $faker->randomFloat(2, 80, 100000);
             $new->save();
         }
     }
