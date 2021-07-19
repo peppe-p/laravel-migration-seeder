@@ -1,6 +1,8 @@
 <?php
 
+use App\Pack;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class PackSeeder extends Seeder
 {
@@ -9,8 +11,15 @@ class PackSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+        for ($i = 0; $i < 12; $i++) {
+            $new = new Pack();
+            $new->pack_name = $faker->company;
+            $new->img = 'https://picsum.photos/400/200';
+            $new->description = $faker->paragraphs();
+            $new->price = $faker->randomFloat(2);
+            $new->save();
+        }
     }
 }

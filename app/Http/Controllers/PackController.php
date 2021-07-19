@@ -14,7 +14,8 @@ class PackController extends Controller
      */
     public function index()
     {
-        //
+        $packs = Pack::all();
+        return view('packs.index', compact('packs'));
     }
 
     /**
