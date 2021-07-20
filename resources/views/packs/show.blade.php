@@ -1,6 +1,11 @@
 @extends('structure')
-@section('title', 'Lista')
+@section('title', '{{ $pack_name }}')
 
 @section('content')
-    <h1>Lista Packs</h1>
+    <div class="container">
+        <h1>{{ $pack_name }}</h1>
+        <img src="{{ $img }}" alt="Image of {{ $pack_name }}">
+        <p>{{ $description }}</p>
+        <h3>{{ $price }}€</h3>
+    </div>
 @endsection
