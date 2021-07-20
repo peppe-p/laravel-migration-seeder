@@ -2,5 +2,8 @@
 @section('title', 'Home')
 
 @section('content')
-    <h1>Home</h1>
+    <div class="container">
+        <h1>Home</h1>
+        <a href="{{ route('packs.index') }}"><button>I Nostri Pacchetti</button></a>
+    </div>
 @endsection
