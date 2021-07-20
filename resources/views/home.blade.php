@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Home</h1>
+        <h1>Home Agenzia</h1>
         <a href="{{ route('packs.index') }}"><button>I Nostri Pacchetti</button></a>
     </div>
 @endsection

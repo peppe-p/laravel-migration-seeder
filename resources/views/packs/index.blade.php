@@ -11,6 +11,7 @@
                     <h3>{{ $pack->pack_name }}</h3>
                     <p>{{ $pack->description }}</p>
                     <h5>{{ $pack->price }}€</h5>
+                    <a href="{{ route('packs.show', $pack->id) }}"><button>Visualizza</button></a>
                 </div>
             @endforeach
         </div>
